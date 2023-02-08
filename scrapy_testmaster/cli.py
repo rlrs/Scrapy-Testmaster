@@ -11,7 +11,7 @@ from w3lib.url import is_url
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import inside_project, get_project_settings
 from scrapy.utils.python import to_unicode
-from scrapy.utils.reqser import request_from_dict
+from scrapy.utils.request import request_from_dict
 from scrapy.commands.genspider import sanitize_module_name
 
 from scrapy_testmaster.utils import (
@@ -202,7 +202,7 @@ class CommandLine:
                 homepage_cookies = get_homepage_cookies(spider)
                 i += 1
 
-            request = request_from_dict(data['request'], spider)
+            request = request_from_dict(data['request'], spider=spider)
             if homepage_cookies:
                 request.cookies = homepage_cookies
             fixture_dir, filename = os.path.split(path)

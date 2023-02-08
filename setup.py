@@ -24,6 +24,8 @@ setuptools.setup(
     ],
     install_requires=[
         'datadiff==2.0.0',
+        'scrapy',
+        'six',
         'requests'
     ],
     entry_points={

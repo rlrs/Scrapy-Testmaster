@@ -8,7 +8,7 @@ import json
 
 from scrapy.http import Request
 from scrapy.utils.python import to_unicode
-from scrapy.utils.reqser import request_from_dict, _get_method
+from scrapy.utils.request import request_from_dict, _get_method
 from scrapy.exceptions import _InvalidOutput, UsageError
 
 
